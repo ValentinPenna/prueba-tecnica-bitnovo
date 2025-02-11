@@ -10,6 +10,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#002859"
+      },
+      fontFamily: {
+        mulish: ['var(--font-mulish)'],
       },
     },
   },

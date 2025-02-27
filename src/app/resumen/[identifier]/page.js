@@ -25,6 +25,7 @@ export default function ResumenPago({ params }) {
 			try {
 				setIsLoading(true);
 				const data = await fetchOrderInfo(identifier);
+				console.log(data[0])
 				setPaymentData(data[0]);
 
 				// Verificar el estado del pago
@@ -136,7 +137,7 @@ export default function ResumenPago({ params }) {
 
 	// Filtra la moneda correspondiente a la orden
 	const selectedCurrency = currencies.find(
-		(curr) => curr.blockchain === currencyId
+		(curr) => curr.blockchain === paymentData.currency_id
 	);
 
 	return (
